@@ -36,9 +36,18 @@ THE SOFTWARE.
 
 
 
-//TODO: wasBack oplossen
 
 
+//TODO: ranges ipv alleen erboven of eronder
+
+
+
+/*
+ * uno: 0x68
+ * 
+ * 
+ * 
+ */
 
 
 //==================================== globals ==================================
@@ -339,12 +348,15 @@ void checkForward(){
             forwardStarted = millis();
             wasBack = true;
         }
+        else{
+           wasBack = false;    
+        }
         forwardLastEnded = millis();
             
         forwardDuration = millis() - forwardStarted;
         
         forward = true;
-        wasBack = false;    //TODO: put it in an else statement man, of course this doesnt work
+       
     } else {
         forward = false;
     }
