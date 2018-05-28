@@ -294,7 +294,7 @@ void checkStates(){
     if(forward &&
         wasBack
         ){
-      Serial.println("mr:03");
+      Serial.println("mr:01");
       //blueTooth.write("FORWARD!");
       #ifdef DEBUG
         glowing = true;               
