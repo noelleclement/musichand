@@ -162,6 +162,18 @@ boolean wasBack = false;
 boolean wasItLifted = false;
 
 
+////////////////////////// for bluetooth
+
+/*
+#include <SoftwareSerial.h>
+
+#define rxPin 7                    // define SoftwareSerial rx data pin  
+#define txPin 8                    // define SoftwareSerial tx data pin  
+
+SoftwareSerial blueTooth(rxPin, txPin);  // create instance of SoftwareSerial  
+
+*/
+
 
 
 //==================================== setup ==================================
@@ -214,6 +226,8 @@ void setup() {
             readings[axis][i] = 0;
         }
     }
+    pinMode(0, OUTPUT);
+    //blueTooth.begin(38400);
 
     
 }
@@ -280,7 +294,8 @@ void checkStates(){
     if(forward &&
         wasBack
         ){
-      Serial.println("forward");
+      Serial.println("mr:03");
+      //blueTooth.write("FORWARD!");
       #ifdef DEBUG
         glowing = true;               
       #endif

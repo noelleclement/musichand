@@ -1,4 +1,4 @@
-/* ============================================
+ /* ============================================
 I2Cdev device library code is placed under the MIT license
 Copyright (c) 2011 Jeff Rowberg
 
@@ -51,7 +51,7 @@ int16_t gx, gy, gz;
 // not so easy to parse, and slow(er) over UART.
 #define OUTPUT_READABLE_ACCELGYRO
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
  #define DEBUG_PRINT(x)  Serial.print (x)
